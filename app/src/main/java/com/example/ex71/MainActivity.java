@@ -2,6 +2,7 @@ package com.example.ex71;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
         dot = findViewById(R.id.dot);
         plusminus = findViewById(R.id.plusminus);
         tv = findViewById(R.id.result);
+        zero.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                goToCredit(v);
+                return true;
+            }
+        });
     }
 
     public void one(View view) {
@@ -128,6 +136,12 @@ public class MainActivity extends AppCompatActivity {
             tv.setText(result + "");
         }
         current = 0;
+    }
+
+    public void goToCredit(View view) {
+        Intent intent = new Intent(this, credit.class);
+        intent.putExtra("result", result);
+        startActivity(intent);
     }
 
 
