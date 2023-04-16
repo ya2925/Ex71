@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         else if (tv.getText().toString().charAt(0) != '-') {
             tv.setText("-" + tv.getText());
         }
+        System.out.println("plusminus");
     }
     public void clear(View view) {
         tv.setText("");
@@ -143,7 +144,4 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("result", result);
         startActivity(intent);
     }
-
-
-
 }

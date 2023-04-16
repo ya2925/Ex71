@@ -9,18 +9,28 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Long press zero for credit"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2" />
+        android:layout_weight="1" />
 
     <TextView
         android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:textSize="32dp"
-        android:gravity="start"/>
+        android:gravity="start"
+        android:textColor="@color/white"
+        android:textSize="32dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
